@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  border: 1px solid tomato;
+  padding: 100px;
+}
+
+.progress-steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 350px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.progress {
+  height: 3px;
+  background-color: tomato;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+  width: 0%;
+  transition: 0.4 ease;
+}
+
+.progress-steps::before {
+  content: '';
+  height: 3px;
+  background-color: #e6e6e6;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+
+  width: 100%;
+}
+
+.circle {
+  border: 3px solid #e6e6e6;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  border: 3px solid tomato;
+}
+
+.btn {
+  padding: 10px 25px;
+  font-size: 17px;
+  font-weight: bolder;
+  background-color: tomato;
+  border: none;
+  border-radius: 6px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  background-color: rgba(255, 99, 71, 0.855);
+}
